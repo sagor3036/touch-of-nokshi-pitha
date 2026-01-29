@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touch of Nokshi Pitha | টাচ অফ নকশি পিঠা</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf4;
+      color: #333;
+    }
+
+    header {
+      background: #a63d2f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ===== IMAGE SLIDER ===== */
+    .image-slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .image-slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .image-slider img.active {
+      opacity: 1;
+    }
+
+    h2 {
+      color: #a63d2f;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Touch of Nokshi Pitha</h1>
+  <p>ভালোবাসায় তৈরি, একদম কেমিক্যাল-মুক্ত 💚</p>
+</header>
+
+<section>
+
+  <div class="card">
+
+    <!-- IMAGE SLIDER -->
+    <div class="image-slider">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/%E0%A6%A8%E0%A6%95%E0%A6%B6%E0%A6%BF_%E0%A6%AA%E0%A6%BF%E0%A6%A0%E0%A6%BE%2C_%E0%A6%AB%E0%A7%81%E0%A6%B2_%E0%A6%AA%E0%A6%BF%E0%A6%A0%E0%A6%BE.jpg/960px-%E0%A6%A8%E0%A6%95%E0%A6%B6%E0%A6%BF_%E0%A6%AA%E0%A6%BF%E0%A6%A0%E0%A6%BE%2C_%E0%A6%AB%E0%A7%81%E0%A6%B2_%E0%A6%AA%E0%A6%BF%E0%A6%A0%E0%A6%BE.jpg"
+           class="active" alt="নকশি পিঠা">
+
+      <img src="https://img.drz.lazcdn.com/static/bd/p/4ca2952d7a9a508bde81a0290e7170cb.jpg_960x960q80.jpg_.webp"
+           alt="নকশি পিঠা ২">
+
+      <img src="https://i.pinimg.com/736x/65/4b/e8/654be8dc901f6c087d161a3c90e1cf27.jpg"
+           alt="নকশি পিঠা ৩">
+    </div>
+
+    <h2>নকশি পিঠা</h2>
+    <p>
+      খাঁটি দেশি উপকরণে হাতে বানানো নরম ও মজাদার নকশি পিঠা।  
+      বাচ্চা থেকে বড়—সবার জন্য safe ও healthy।
+    </p>
+
+    <p class="price">মূল্য: ৬০০ টাকা / কেজি</p>
+
+    <a class="btn"
+       href="https://wa.me/8801828038335?text=আমি%20নকশি%20পিঠা%20অর্ডার%20করতে%20চাই"
+       target="_blank">
+       📲 WhatsApp এ অর্ডার করুন
+    </a>
+
+  </div>
+
+  <div class="card">
+    <h2>ডেলিভারি তথ্য</h2>
+    <p>
+      📍 ঢাকা ও ঢাকার বাইরে কুরিয়ারে পাঠানো হয় <br>
+      📦 সুন্দরভাবে প্যাক করে পাঠানো হয় <br>
+      ⏰ অর্ডার অনুযায়ী তৈরি
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 | Touch of Nokshi Pitha <br>
+  Homemade & Fresh
+</footer>
+
+<!-- SLIDER SCRIPT -->
+<script>
+  const slides = document.querySelectorAll(".image-slider img");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3000);
+</script>
+
+</body>
+</html>
